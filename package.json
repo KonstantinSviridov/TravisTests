@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "npm install dev-env-installer@0.0.10 -g && npm install rimraf -g && npm install mocha",
-    "installParser": "cd ../ && rimraf parser && mkdir parser && cd ./parser && git clone -b develop https://www.github.com/raml-org/raml-js-parser-2 --depth 1 && cd ../TravisTests && npm run doInstallParser",
+    "installParser": "cd ../ && rimraf parser && mkdir parser && cd ./parser && git clone -b bugfixing https://www.github.com/raml-org/raml-js-parser-2 --depth 1 && cd ../TravisTests && npm run doInstallParser",
     "doInstallParser": "cd ../parser/raml-js-parser-2 && dev-env-installer install --workspace ../ --descriptor ./workspace.json -directlinks && npm run buildall  && cd ../../TravisTests",
     "execute": "node ./src/script.js",
     "executeMocha": "cd ../parser/raml-js-parser-2 && mocha dist/raml1/test/TCK2.js && cd ../../TravisTests",
