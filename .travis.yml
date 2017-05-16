@@ -10,4 +10,4 @@ node_js:
 
 before_script: npm run prepare
 
-script: npm run installParser && node run execute
+script: npm run installParser && npm run execute
