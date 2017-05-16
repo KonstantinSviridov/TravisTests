@@ -1,0 +1,23 @@
+{
+  "name": "travis-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "npm install dev-env-installer@0.0.10 -g && npm install rimraf -g",
+    "doInstallParser": "cd ./parser/raml-js-parser-2 && dev-env-installer install --workspace ../ --descriptor ./workspace.json -directlinks && npm run buildall  && cd ../../",
+    "installParser": "rimraf parser && mkdir parser && cd ./parser && git clone -b develop https://www.github.com/raml-org/raml-js-parser-2 --depth 1 && cd ../ && npm run doInstallParser",
+    "execute": "node ./src/script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstantinSviridov/TravisTests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konstantinSviridov/TravisTests/issues"
+  },
+  "homepage": "https://github.com/konstantinSviridov/TravisTests#readme"
+}
