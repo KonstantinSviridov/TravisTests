@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "npm install dev-env-installer@0.0.10 -g && npm install rimraf -g",
+    "prepare": "npm install dev-env-installer@0.0.10 -g && npm install rimraf -g && npm install mocha",
     "doInstallParser": "cd ./parser/raml-js-parser-2 && dev-env-installer install --workspace ../ --descriptor ./workspace.json -directlinks && npm run buildall  && cd ../../",
-    "installParser": "rimraf parser && mkdir parser && cd ./parser && git clone -b develop https://www.github.com/raml-org/raml-js-parser-2 --depth 1 && cd ../ && npm run doInstallParser",
-    "execute": "node ./src/script.js",
+    "installParser": "rimraf parser && mkdir parser && cd ./parser && git clone -b bugfixing https://www.github.com/raml-org/raml-js-parser-2 --depth 1 && cd ../ && npm run doInstallParser",
+    "execute": "mocha dist/raml1/test/TCK2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
