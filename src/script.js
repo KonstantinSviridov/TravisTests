@@ -2,7 +2,7 @@ var parser = require("../../parser/raml-js-parser-2/dist/index");
 var path = require("path");
 
 var parserDir = path.resolve(__dirname,"../../parser/raml-js-parser-2");
-var testRelPath = "./src/raml1/test/data/TCK/raml-1.0/JSONErrorsPositioning/ReferenceTests/test002/api.raml";
+var testRelPath = ".src/raml1/test/data/parser/jsonscheme/test13/api.raml";
 var inputPath = path.resolve(parserDir,testRelPath);
 
 var api = parser.loadApiSync(inputPath);
