@@ -12,7 +12,7 @@ var testRelPaths = [
   "./TCK/raml-1.0/InvalidIncludeTags/test002/api.raml"
 ];
 
-var inputPaths = testPaths.map(function(x){return path.resolve(parserDir,x)});
+var inputPaths = testRelPaths.map(function(x){return path.resolve(parserDir,x)});
 
 for(var inputPath of inputPaths){
 	
